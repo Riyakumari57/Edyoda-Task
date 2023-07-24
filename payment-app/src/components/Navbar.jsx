@@ -1,4 +1,4 @@
-import { BiSearch, BiCaretDown } from "react-icons/bi";
+import {  BiCaretDown } from "react-icons/bi";
 function Navbar() {
   return (
     <>
@@ -24,7 +24,8 @@ function Navbar() {
 
         <div className="right-container">
           <i>
-            <BiSearch></BiSearch>
+            <div className="search"></div>
+
           </i>
           <a href="#">Log in</a>
           <button>JOIN NOW</button>

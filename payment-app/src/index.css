@@ -3,10 +3,12 @@ nav {
     display: flex;
     justify-content: space-between;
     color: black;
-    width: 1920px;
+    width: 100%;
     height: 82px;
-    padding: 45px 80px;
+    padding: 25px 80px;
     align-items: center;
+    
+    
 }
 
 nav .left-container {
@@ -14,7 +16,7 @@ nav .left-container {
 }
 
 .sitename {
-    font-size: 50px;
+    font-size: 38px;
     font-style: normal;
     font-weight: 900;
     letter-spacing: 1.14px;
@@ -35,7 +37,7 @@ nav .left-container .list {
     text-decoration: none;
     color: #000;
     text-align: center;
-    font-size: 24px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 500;
 }
@@ -48,21 +50,21 @@ nav .right-container {
 }
 
 
-nav .right-container i {
+nav .right-container .search {
     width: 24px;
     height: 24px;
-    font-size: 1.8rem;
+    background: url('../public/images/Search Icon.png');
 }
 
 nav .right-container a {
     text-decoration: none;
     color: black;
-    font-size: 1.7rem;
+    font-size: 16px;
     font-weight: 500;
 }
 
 nav .right-container button {
-    height: 60px;
+    height: 40px;
     padding: 10px 42px;
     align-items: center;
     gap: 10px;
@@ -70,7 +72,7 @@ nav .right-container button {
     background: linear-gradient(224deg, #0048ff 0%, #0096ff 100%);
     color: #fff;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 16px;
     font-weight: 700;
     line-height: normal;
     text-transform: uppercase;
@@ -83,17 +85,16 @@ nav .right-container button {
 .content-box {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    max-width: 480px;
 
 }
 
 .content-box h3 {
-    max-width: 800px;
+    
     color: #FFF;
-    font-size: 56px;
+    font-size: 35px;
     font-style: normal;
     font-weight: 600;
-    /* 70px */
     letter-spacing: -0.56px;
     margin-bottom: 30px;
 }
@@ -101,7 +102,7 @@ nav .right-container button {
 .content-box h3 span {
     font-family: 'Roboto', sans-serif;
     color: #FFF;
-    font-size: 64px;
+    font-size: 40px;
     font-style: normal;
     font-weight: 600;
     letter-spacing: -0.64px;
@@ -110,7 +111,7 @@ nav .right-container button {
 .content-box .discount {
     font-family: 'Roboto', sans-serif;
     color: #0096FF;
-    font-size: 64px;
+    font-size: 40px;
     font-style: normal;
     font-weight: 600;
     letter-spacing: -0.64px;
@@ -125,44 +126,57 @@ nav .right-container button {
 }
 
 .content-box .box svg {
-    width: 59.456px;
-    height: 60.8px;
+    width: 43px;
+    height: 50px;
     flex-shrink: 0;
 }
 
-
-.content-box .box .tv {
+/* .content-box .box .book{
+    width: 40px;
+    height: 40px;
+    background: url('../public/images/Icon (2).png');
+}
+.content-box .box .clock{
     width: 80px;
     height: 80px;
+    background: url('../public/images/Group 19.png');
+} */
+.content-box .box .tv {
+    width: 40px;
+    height: 40px;
     background: url('../public/images/Icon (1).png');
-   
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
-
+/* .content-box .box .scholar{
+    width: 40px;
+    height: 40px;
+    background: url('../public/images/Group 17.png');
+} */
 
 .content-box .box .circle{
-    width: 80px;
-    height: 80px;
+    width: 40px;
+    height: 40px;
     background: url('../public/images/Icon.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 .content-box .box p {
     color: #FFF;
     font-family: 'Roboto', sans-serif;
-    font-size: 32px;
+    font-size: 23px;
     font-style: normal;
     font-weight: 400;
-    line-height: 100%;
     letter-spacing: 0.96px;
 }
 
 .content-box .box span {
     color: #0096FF;
     font-family: 'Roboto', sans-serif;
-    font-size: 32px;
+    font-size: 23px;
     font-style: normal;
     font-weight: 600;
-    line-height: 100%;
-    /* 32px */
     letter-spacing: 0.96px;
 }
 
@@ -177,22 +191,22 @@ del {
 
 
 .form {
-    width: 549px;
-    height: 960px;
-    padding: 32px 24px;
+    width: 469px;
+    padding: 25px 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 8px;
     background: #FFF;
+    gap: 15px;
 }
 
 .form .progress-bar {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 160px;
-    margin-bottom: -20px;
+    gap: 100px;
+    margin-bottom: -10px;
 }
 
 .form .progress-bar div {
@@ -206,8 +220,8 @@ del {
 
 .form .progress-bar div .stage {
     display: flex;
-    width: 38px;
-    height: 38px;
+    width: 28px;
+    height: 28px;
     padding: 7.093px 10.133px 8.107px 10.133px;
     justify-content: center;
     align-items: center;
@@ -217,10 +231,9 @@ del {
     color: #FFF;
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    font-size: 24px;
+    font-size: 15px;
     font-style: normal;
     font-weight: 600;
-    line-height: 18px;
     letter-spacing: -0.36px;
 }
 
@@ -228,7 +241,7 @@ del {
     color: #3C4852;
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font-size: 10px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -239,7 +252,7 @@ del {
     color: #3C4852;
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    font-size: 24px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 600;
 }
@@ -263,20 +276,20 @@ del {
     border: 2px solid #BEBEBE;
     background: #E7E7E7;
     color: #BEBEBE;
-    height: 80px;
+    height: 50px;
     position: relative;
 
 }
 
 .form .Expired-text-field1 .expired-offer {
-    padding: 4px 29px;
+    padding: 3px 20px;
     border-radius: 0px 0px 4px 4px;
     background: #F77171;
     position: absolute;
     color: white;
     position: absolute;
     left: 62px;
-    font-size: 12px;
+    font-size: 8px;
     font-style: normal;
     font-weight: 500;
     top: 0;
@@ -286,41 +299,28 @@ del {
 
 .form .Input-container .text-field1 {
     display: flex;
-    padding: 16px;
+    padding: 13px;
     align-items: center;
     gap: 12px;
     align-self: stretch;
     border-radius: 4px;
     border-radius: 4px;
     border: 2px solid #BEBEBE;
-    height: 80px;
+    height: 50px;
     position: relative;
 
 }
 
-.form .Input-container .text-field2 {
-    display: flex;
-    padding: 16px;
-    align-items: center;
-    gap: 12px;
-    align-self: stretch;
-    border-radius: 4px;
-    border-radius: 4px;
-    border: 2px solid #BEBEBE;
-    height: 80px;
-    position: relative;
-
-}
 
 .form .text-field1 .recommened-offer {
     position: absolute;
     border-radius: 0px 0px 4px 4px;
     background: #47BA68;
-    padding: 4px 25px;
+    padding: 3px 20px;
     left: 62px;
     top: 0;
     color: white;
-    font-size: 12px;
+    font-size: 8px;
     font-style: normal;
     font-weight: 500;
     font-family: 'Roboto', sans-serif;
@@ -329,8 +329,8 @@ del {
 
 
 .form .Input-container .Expired-text-field1 .btn {
-    width: 30px;
-    height: 30px;
+    width: 15px;
+    height: 15px;
     color: #BEBEBE;
 }
 
@@ -340,8 +340,8 @@ del {
 
 .form .btn2 {
     accent-color: #47BA68;
-    width: 25px;
-    height: 25px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
     vertical-align: middle;
     border: 1px solid #ddd;
@@ -375,7 +375,7 @@ del {
     color: #BEBEBE;
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 600;
 }
@@ -385,7 +385,7 @@ del {
     color: #3C4852;
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 600;
 }
@@ -394,7 +394,9 @@ del {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 
@@ -402,7 +404,7 @@ del {
     color: #BEBEBE;
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    font-size: 12px;
+    font-size: 10px;
     font-style: normal;
     font-weight: 400;
 }
@@ -412,14 +414,14 @@ del {
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .form .right-text .ExpiredTotalprice {
     color: #BEBEBE;
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font-size: 10px;
     font-weight: 600;
 }
 
@@ -427,7 +429,7 @@ del {
     color: #BEBEBE;
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 500;
 }
 
@@ -443,7 +445,7 @@ del {
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
 }
 
@@ -452,7 +454,7 @@ del {
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 600;
 }
 
@@ -462,7 +464,7 @@ del {
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 400;
 }
 
@@ -481,8 +483,8 @@ del {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 12px;
-    padding: 16px 24px;
+    gap: 8px;
+    padding: 5px 20px;
     align-self: stretch;
 
     border-top: 1px solid black;
@@ -503,7 +505,7 @@ del {
     text-align: center;
     font-family: Roboto;
     font-style: normal;
-    font-size: 16px;
+    font-size: 13px;
 
 }
 
@@ -520,8 +522,8 @@ del {
 
 .form .alert {
     display: flex;
-    width: 501px;
-    padding: 12px 24px;
+    width:440px;
+    padding: 12px 28px;
     flex-direction: column;
     align-items: flex-start;
     gap: 4px;
@@ -532,7 +534,7 @@ del {
 
 .form .alert-header {
     display: flex;
-    height: 24px;
+    height: 10px;
     justify-content: space-between;
     align-items: center;
     align-self: stretch;
@@ -545,24 +547,29 @@ del {
 }
 
 .form .alert-body svg {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
 }
 
 .form .alert .offer {
     color: #DE4313;
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font-size: 13px;
     font-style: normal;
     font-weight: 600;
 }
 
+.form .alert .deduct{
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+}
 .form .alert .deadline {
     color: #DE4313;
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 400;
 }
@@ -581,7 +588,7 @@ del {
 .form .gst {
     color: #3C4852;
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 400;
 }
 
@@ -589,7 +596,7 @@ del {
     color: #3C4852;
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    font-size: 24px;
+    font-size: 17px;
     font-weight: 700;
     letter-spacing: 0.72px;
 }
@@ -600,6 +607,7 @@ del {
     align-items: center;
     gap: 16px;
     align-self: stretch;
+    margin-top: -15px;
     margin-bottom: -20px;
 }
 
@@ -607,7 +615,7 @@ del {
     display: flex;
     flex: 1 1 0;
     height: 56px;
-    padding: 10px 42px;
+    padding: 7px 37px;
     border-radius: 4px;
     border: 2px solid #F77171;
     color: #F77171;
@@ -627,14 +635,14 @@ del {
     align-items: center;
     flex: 1 1 0;
     height: 56px;
-    padding: 10px 42px;
+    padding: 7px 37px;
     border-radius: 4px;
     background: #47BA68;
     border: none;
     color: #FFF;
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
 }

@@ -128,7 +128,7 @@ function Content() {
             {/* pointer 5 */}
           <div className="box">
             <div className="circle"></div>
-            <p> <span>Ad Free</span>  learning experience</p>
+            <p><span>Ad Free</span>  learning experience</p>
           </div>
 
         </div>

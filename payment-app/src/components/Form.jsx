@@ -41,7 +41,7 @@ function Form() {
           </div>
         </div>
 
-        <h1 className="form-header">Select your subcription plan</h1>
+        <div className="form-header">Select your subcription plan</div>
 
         <div className="Input-container">
           {/* Expired */}
@@ -50,6 +50,8 @@ function Form() {
             <input className="btn" type="radio" name="foo" value="N" disabled />
             <div className="Expired-text-container">
               <p className="Expired-subsrciption">12 Month Subscription</p>
+             
+             
               <div className="right-text">
                 <p className="Expired">
                   Total&nbsp;<span className="ExpiredTotalprice"> ₹99</span>
@@ -160,7 +162,7 @@ function Form() {
           <div className="alert">
             <div className="alert-header">
               <p className="offer">Limited time offer</p>
-              <p>- ₹18,401</p>
+              <p className="deduct">- ₹18,401</p>
             </div>
             <div className="alert-body">
               <i>
