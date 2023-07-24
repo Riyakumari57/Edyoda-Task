@@ -83,8 +83,6 @@ nav .right-container button {
 .content-box {
     display: flex;
     flex-direction: column;
-    /* align-items: flex-start; */
-    /* gap: 48px; */
     gap: 20px;
 
 }
@@ -124,7 +122,6 @@ nav .right-container button {
     display: flex;
     align-items: center;
     gap: 64px;
-    /* align-self: stretch; */
 }
 
 .content-box .box svg {
@@ -137,7 +134,7 @@ nav .right-container button {
 .content-box .box .tv {
     width: 80px;
     height: 80px;
-    background: url('../public/Icon\ \(1\).png');
+    background: url('../public/images/Icon (1).png');
    
 }
 
@@ -145,7 +142,7 @@ nav .right-container button {
 .content-box .box .circle{
     width: 80px;
     height: 80px;
-    background: url('../public/Icon.png');
+    background: url('../public/images/Icon.png');
 }
 
 .content-box .box p {
@@ -653,5 +650,5 @@ del {
     width: 120px;
     height: 42.688px;
     flex-shrink: 0;
-    background: url('../public/Frame\ 12537.png');
+    background: url('../public/images/Frame 12537.png');
 }
