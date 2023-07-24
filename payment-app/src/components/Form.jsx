@@ -1,134 +1,199 @@
-import ButtonContain from "./ButtonContain"
+import { useState } from "react";
+import ButtonContain from "./ButtonContain";
 
 function Form() {
+  const [selectedOption, setSelectedOption] = useState("");
+  const [totalValue, setTotalValue] = useState(149);
+
+  const handleOptionChange = (event) => {
+    console.log(event.target.value);
+    let val;
+    if(event.target.value=="option1")
+    {
+          val =1;
+    }
+    else if(event.target.value=="option2")
+    {
+        val =2 ;
+    }
+    else val = 3;
+    setSelectedOption(event.target.value);
+    var finalOutPut =  document.getElementById(`myPTag${val}`).textContent;
+    console.log(finalOutPut);
+    parseInt(finalOutPut);
+     finalOutPut = Math.ceil((finalOutPut*83.24022)/100);
+     console.log(finalOutPut);
+      setTotalValue(finalOutPut);
+  };
+   
+
   return (
-   <>
-        <div className="form">
-            <div className="progress-bar">
-                <div>
-                    <div className="stage">1</div>
-                    <p>Sign UP</p>
-                </div>
-                <div>
-                    <div className="stage">2</div>
-                    <p>Subscribe</p>
-                </div>
-            </div>
-
-            <h1 className="form-header">Select your subcription plan</h1>
-
-            <div className="Input-container">
-
-                {/* Expired */}
-                   <div className="Expired-text-field1">
-                   <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
-                     <path d="M4.63541 21.3037L4.63559 21.3041C5.28716 22.815 6.16685 24.1194 7.27378 25.2263C8.3807 26.3332 9.68505 27.2129 11.196 27.8645L11.1964 27.8647C12.688 28.5087 14.2858 28.8334 16 28.8334C17.7142 28.8334 19.312 28.5087 20.8036 27.8647L20.804 27.8645C22.315 27.2129 23.6193 26.3332 24.7262 25.2263C25.8332 24.1194 26.7128 22.815 27.3644 21.3041L27.3646 21.3037C28.0086 19.8121 28.3333 18.2143 28.3333 16.5001C28.3333 14.7859 28.0086 13.1881 27.3646 11.6965L27.3644 11.6961C26.7128 10.1851 25.8332 8.88078 24.7262 7.77386C23.6193 6.66694 22.315 5.78679 20.804 5.13434L4.63541 21.3037ZM4.63541 21.3037C3.99138 19.8121 3.66667 18.2143 3.66667 16.5001C3.66667 14.7859 3.99138 13.1881 4.63541 11.6965L4.63559 11.6961M4.63541 21.3037L4.63559 11.6961M4.63559 11.6961C5.28716 10.1851 6.16685 8.88078 7.27378 7.77386M4.63559 11.6961L7.27378 7.77386M7.27378 7.77386C8.3808 6.66684 9.68529 5.78663 11.1964 5.13416M7.27378 7.77386L11.1964 5.13416M11.1964 5.13416C12.688 4.49102 14.2858 4.16675 16 4.16675M11.1964 5.13416L16 4.16675M16 4.16675C17.7142 4.16675 19.312 4.49102 20.8036 5.13416L16 4.16675Z" stroke="#BEBEBE" stroke-width="2"/>
-                     <path d="M16 24.5C14.8933 24.5 13.8533 24.2899 12.88 23.8696C11.9067 23.4499 11.06 22.88 10.34 22.16C9.62 21.44 9.05013 20.5933 8.6304 19.62C8.21013 18.6467 8 17.6067 8 16.5C8 15.3933 8.21013 14.3533 8.6304 13.38C9.05013 12.4067 9.62 11.56 10.34 10.84C11.06 10.12 11.9067 9.54987 12.88 9.1296C13.8533 8.70987 14.8933 8.5 16 8.5C17.1067 8.5 18.1467 8.70987 19.12 9.1296C20.0933 9.54987 20.94 10.12 21.66 10.84C22.38 11.56 22.9499 12.4067 23.3696 13.38C23.7899 14.3533 24 15.3933 24 16.5C24 17.6067 23.7899 18.6467 23.3696 19.62C22.9499 20.5933 22.38 21.44 21.66 22.16C20.94 22.88 20.0933 23.4499 19.12 23.8696C18.1467 24.2899 17.1067 24.5 16 24.5Z" fill="#BEBEBE"/>
-                        </svg>
-                        <div className="Expired-text-container">
-                        <p className="Expired-subsrciption">12 Month Subscription</p>
-                        <div className="right-text">
-                        <p className="Expired">Total&nbsp;<span className="ExpiredTotalprice"> ₹99</span>
-                            </p>
-                        <p className="ExpiredperPrice">₹8 <span className="Exprired-month">/mo</span></p>
-                        </div>
-                        
-                        </div>
-                       
-                   </div>
-                       
-
-                       {/* non expired fields */}
-
-                   <div className="text-field1">
-                   <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
-                     <path d="M4.63541 21.3037L4.63559 21.3041C5.28716 22.815 6.16685 24.1194 7.27378 25.2263C8.3807 26.3332 9.68505 27.2129 11.196 27.8645L11.1964 27.8647C12.688 28.5087 14.2858 28.8334 16 28.8334C17.7142 28.8334 19.312 28.5087 20.8036 27.8647L20.804 27.8645C22.315 27.2129 23.6193 26.3332 24.7262 25.2263C25.8332 24.1194 26.7128 22.815 27.3644 21.3041L27.3646 21.3037C28.0086 19.8121 28.3333 18.2143 28.3333 16.5001C28.3333 14.7859 28.0086 13.1881 27.3646 11.6965L27.3644 11.6961C26.7128 10.1851 25.8332 8.88078 24.7262 7.77386C23.6193 6.66694 22.315 5.78679 20.804 5.13434L4.63541 21.3037ZM4.63541 21.3037C3.99138 19.8121 3.66667 18.2143 3.66667 16.5001C3.66667 14.7859 3.99138 13.1881 4.63541 11.6965L4.63559 11.6961M4.63541 21.3037L4.63559 11.6961M4.63559 11.6961C5.28716 10.1851 6.16685 8.88078 7.27378 7.77386M4.63559 11.6961L7.27378 7.77386M7.27378 7.77386C8.3808 6.66684 9.68529 5.78663 11.1964 5.13416M7.27378 7.77386L11.1964 5.13416M11.1964 5.13416C12.688 4.49102 14.2858 4.16675 16 4.16675M11.1964 5.13416L16 4.16675M16 4.16675C17.7142 4.16675 19.312 4.49102 20.8036 5.13416L16 4.16675Z" stroke="#BEBEBE" stroke-width="2"/>
-                     <path d="M16 24.5C14.8933 24.5 13.8533 24.2899 12.88 23.8696C11.9067 23.4499 11.06 22.88 10.34 22.16C9.62 21.44 9.05013 20.5933 8.6304 19.62C8.21013 18.6467 8 17.6067 8 16.5C8 15.3933 8.21013 14.3533 8.6304 13.38C9.05013 12.4067 9.62 11.56 10.34 10.84C11.06 10.12 11.9067 9.54987 12.88 9.1296C13.8533 8.70987 14.8933 8.5 16 8.5C17.1067 8.5 18.1467 8.70987 19.12 9.1296C20.0933 9.54987 20.94 10.12 21.66 10.84C22.38 11.56 22.9499 12.4067 23.3696 13.38C23.7899 14.3533 24 15.3933 24 16.5C24 17.6067 23.7899 18.6467 23.3696 19.62C22.9499 20.5933 22.38 21.44 21.66 22.16C20.94 22.88 20.0933 23.4499 19.12 23.8696C18.1467 24.2899 17.1067 24.5 16 24.5Z" fill="#BEBEBE"/>
-                        </svg>
-                        <div className="text-container">
-                        <p className="subsrciption">12 Month Subscription</p>
-                        <div className="right-text">
-                        <p className="totaltext">Total&nbsp;<span className="Totalprice"> ₹179</span></p>
-                        <p className="perPrice">₹8 <span className="month">/mo</span></p>
-                        </div>
-                        
-                        </div>
-                       
-                   </div>
-
-
-                   <div className="text-field1">
-                   <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
-                     <path d="M4.63541 21.3037L4.63559 21.3041C5.28716 22.815 6.16685 24.1194 7.27378 25.2263C8.3807 26.3332 9.68505 27.2129 11.196 27.8645L11.1964 27.8647C12.688 28.5087 14.2858 28.8334 16 28.8334C17.7142 28.8334 19.312 28.5087 20.8036 27.8647L20.804 27.8645C22.315 27.2129 23.6193 26.3332 24.7262 25.2263C25.8332 24.1194 26.7128 22.815 27.3644 21.3041L27.3646 21.3037C28.0086 19.8121 28.3333 18.2143 28.3333 16.5001C28.3333 14.7859 28.0086 13.1881 27.3646 11.6965L27.3644 11.6961C26.7128 10.1851 25.8332 8.88078 24.7262 7.77386C23.6193 6.66694 22.315 5.78679 20.804 5.13434L4.63541 21.3037ZM4.63541 21.3037C3.99138 19.8121 3.66667 18.2143 3.66667 16.5001C3.66667 14.7859 3.99138 13.1881 4.63541 11.6965L4.63559 11.6961M4.63541 21.3037L4.63559 11.6961M4.63559 11.6961C5.28716 10.1851 6.16685 8.88078 7.27378 7.77386M4.63559 11.6961L7.27378 7.77386M7.27378 7.77386C8.3808 6.66684 9.68529 5.78663 11.1964 5.13416M7.27378 7.77386L11.1964 5.13416M11.1964 5.13416C12.688 4.49102 14.2858 4.16675 16 4.16675M11.1964 5.13416L16 4.16675M16 4.16675C17.7142 4.16675 19.312 4.49102 20.8036 5.13416L16 4.16675Z" stroke="#BEBEBE" stroke-width="2"/>
-                     <path d="M16 24.5C14.8933 24.5 13.8533 24.2899 12.88 23.8696C11.9067 23.4499 11.06 22.88 10.34 22.16C9.62 21.44 9.05013 20.5933 8.6304 19.62C8.21013 18.6467 8 17.6067 8 16.5C8 15.3933 8.21013 14.3533 8.6304 13.38C9.05013 12.4067 9.62 11.56 10.34 10.84C11.06 10.12 11.9067 9.54987 12.88 9.1296C13.8533 8.70987 14.8933 8.5 16 8.5C17.1067 8.5 18.1467 8.70987 19.12 9.1296C20.0933 9.54987 20.94 10.12 21.66 10.84C22.38 11.56 22.9499 12.4067 23.3696 13.38C23.7899 14.3533 24 15.3933 24 16.5C24 17.6067 23.7899 18.6467 23.3696 19.62C22.9499 20.5933 22.38 21.44 21.66 22.16C20.94 22.88 20.0933 23.4499 19.12 23.8696C18.1467 24.2899 17.1067 24.5 16 24.5Z" fill="#BEBEBE"/>
-                        </svg>
-                        <div className="text-container">
-                        <p className="subsrciption">12 Month Subscription</p>
-                        <div className="right-text">
-                        <p className="totaltext">Total&nbsp;<span className="Totalprice"> ₹149</span></p>
-                        <p className="perPrice">₹8 <span className="month">/mo</span></p>
-                        </div>
-                        
-                        </div>
-                       
-                   </div>
-
-
-                   <div className="text-field1">
-                   <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
-                     <path d="M4.63541 21.3037L4.63559 21.3041C5.28716 22.815 6.16685 24.1194 7.27378 25.2263C8.3807 26.3332 9.68505 27.2129 11.196 27.8645L11.1964 27.8647C12.688 28.5087 14.2858 28.8334 16 28.8334C17.7142 28.8334 19.312 28.5087 20.8036 27.8647L20.804 27.8645C22.315 27.2129 23.6193 26.3332 24.7262 25.2263C25.8332 24.1194 26.7128 22.815 27.3644 21.3041L27.3646 21.3037C28.0086 19.8121 28.3333 18.2143 28.3333 16.5001C28.3333 14.7859 28.0086 13.1881 27.3646 11.6965L27.3644 11.6961C26.7128 10.1851 25.8332 8.88078 24.7262 7.77386C23.6193 6.66694 22.315 5.78679 20.804 5.13434L4.63541 21.3037ZM4.63541 21.3037C3.99138 19.8121 3.66667 18.2143 3.66667 16.5001C3.66667 14.7859 3.99138 13.1881 4.63541 11.6965L4.63559 11.6961M4.63541 21.3037L4.63559 11.6961M4.63559 11.6961C5.28716 10.1851 6.16685 8.88078 7.27378 7.77386M4.63559 11.6961L7.27378 7.77386M7.27378 7.77386C8.3808 6.66684 9.68529 5.78663 11.1964 5.13416M7.27378 7.77386L11.1964 5.13416M11.1964 5.13416C12.688 4.49102 14.2858 4.16675 16 4.16675M11.1964 5.13416L16 4.16675M16 4.16675C17.7142 4.16675 19.312 4.49102 20.8036 5.13416L16 4.16675Z" stroke="#BEBEBE" stroke-width="2"/>
-                     <path d="M16 24.5C14.8933 24.5 13.8533 24.2899 12.88 23.8696C11.9067 23.4499 11.06 22.88 10.34 22.16C9.62 21.44 9.05013 20.5933 8.6304 19.62C8.21013 18.6467 8 17.6067 8 16.5C8 15.3933 8.21013 14.3533 8.6304 13.38C9.05013 12.4067 9.62 11.56 10.34 10.84C11.06 10.12 11.9067 9.54987 12.88 9.1296C13.8533 8.70987 14.8933 8.5 16 8.5C17.1067 8.5 18.1467 8.70987 19.12 9.1296C20.0933 9.54987 20.94 10.12 21.66 10.84C22.38 11.56 22.9499 12.4067 23.3696 13.38C23.7899 14.3533 24 15.3933 24 16.5C24 17.6067 23.7899 18.6467 23.3696 19.62C22.9499 20.5933 22.38 21.44 21.66 22.16C20.94 22.88 20.0933 23.4499 19.12 23.8696C18.1467 24.2899 17.1067 24.5 16 24.5Z" fill="#BEBEBE"/>
-                        </svg>
-                        <div className="text-container">
-                        <p className="subsrciption">12 Month Subscription</p>
-                        <div className="right-text">
-                        <p className="totaltext">Total&nbsp;<span className="Totalprice"> ₹99</span></p>
-                        <p className="perPrice">₹8 <span className="month">/mo</span></p>
-                        </div>
-                        
-                        </div>
-                       
-                   </div>
-                   
-            </div>
-
-
-            <div className="summary-container">
-                <div className="text-container">
-                    <p className="SubsFee">Subscription Fee</p>
-                    <p className="SubsFeeNum">₹18,500</p>
-                </div>
-
-                <div className="alert">
-                <div className="alert-header">
-                    <p className="offer">Limited time offer</p>
-                    <p>- ₹18,401</p>
-                </div>
-                <div className="alert-body">
-                    <i><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                         <path d="M11 7V13L16.2 16.1L17 14.9L12.5 12.2V7H11ZM20 12V18H22V12H20ZM20 20V22H22V20H20ZM18 20C16.3 21.3 14.3 22 12 22C6.49998 22 1.99998 17.5 1.99998 12C1.99998 6.5 6.49998 2 12 2C16.8 2 20.9 5.4 21.8 10H19.7C18.8 6.6 15.7 4 12 4C7.59998 4 3.99998 7.6 3.99998 12C3.99998 16.4 7.59998 20 12 20C14.4 20 16.5 18.9 18 17.3V20Z" fill="#DE4313"/>
-                        </svg></i>
-                    <p className="deadline">Offer valid till 25th March 2023 </p>
-                </div>
-            </div>
-            <div className="text-container-gst">
-                    <p className="gst">Total (Incl. of 18% GST)</p>
-                    <p className="finalPrice">₹149</p>
-                </div>
-            </div>
-
-
-
-           <ButtonContain/>
-
-           <div className="icon-container">
-            <div className="icon"></div>
-           </div>
-
+    <>
+      <div className="form">
+        <div className="progress-bar">
+          <div>
+            <div className="stage">1</div>
+            <p>Sign UP</p>
+          </div>
+          <div>
+            <div className="stage">2</div>
+            <p>Subscribe</p>
+          </div>
         </div>
-    
-   </>
-  )
+
+        <h1 className="form-header">Select your subcription plan</h1>
+
+        <div className="Input-container">
+          {/* Expired */}
+          <div className="Expired-text-field1">
+            <div className="expired-offer">Offer Expired</div>
+            <input className="btn" type="radio" name="foo" value="N" disabled />
+            <div className="Expired-text-container">
+              <p className="Expired-subsrciption">12 Month Subscription</p>
+              <div className="right-text">
+                <p className="Expired">
+                  Total&nbsp;<span className="ExpiredTotalprice"> ₹99</span>
+                </p>
+                <p className="ExpiredperPrice">
+                  ₹8 <span className="Exprired-month">/mo</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* non expired fields */}
+
+          <div
+            className="text-field1"
+            style={{
+              backgroundColor: selectedOption === "option1" ? "#D7EDDD" : "",
+            }}
+          >
+            <div className="recommened-offer">Recommended</div>
+            <input
+              className="btn2"
+              type="checkbox"
+              value="option1"
+              checked={selectedOption === "option1"}
+              onChange={handleOptionChange}
+            />
+            <div className="text-container">
+              <p className="subsrciption">12 Month Subscription</p>
+              <div className="right-text">
+                <p className="totaltext">
+                  Total&nbsp;{" "}<span className="Totalprice">₹</span>
+                  <span id="myPTag1" className="Totalprice">
+                    179
+                  </span>
+                </p>
+                <p className="perPrice">
+                  ₹8 <span className="month">/mo</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            className="text-field1"
+            style={{
+              backgroundColor: selectedOption === "option2" ? "#D7EDDD" : "",
+            }}
+          >
+            <input
+              type="checkbox"
+              value="option2"
+              checked={selectedOption === "option2"}
+              onChange={handleOptionChange}
+              className="btn2"
+            />
+            <div className="text-container">
+              <p className="subsrciption">6 Month Subscription</p>
+              <div className="right-text">
+                <p className="totaltext">
+                  Total&nbsp;{" "}<span className="Totalprice">₹</span>
+                  <span id="myPTag2" className="Totalprice">
+                    149
+                  </span>
+                </p>
+                <p className="perPrice">
+                  ₹25 <span className="month">/mo</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            className="text-field1"
+            style={{
+              backgroundColor: selectedOption === "option3" ? "#D7EDDD" : "",
+            }}
+          >
+            <input
+              className="btn2"
+              type="checkbox"
+              value="option3"
+              checked={selectedOption === "option3"}
+              onChange={handleOptionChange}
+            />
+            <div className="text-container">
+              <p className="subsrciption">3 Month Subscription</p>
+              <div className="right-text">
+                <p className="totaltext">
+                  Total&nbsp;{" "} <span className="Totalprice">₹</span>
+                  <span id="myPTag3" className="Totalprice">99
+                  </span>
+                </p>
+                <p className="perPrice">
+                  ₹33 <span className="month">/mo</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="summary-container">
+          <div className="text-container">
+            <p className="SubsFee">Subscription Fee</p>
+            <p className="SubsFeeNum">₹18,500</p>
+          </div>
+
+          <div className="alert">
+            <div className="alert-header">
+              <p className="offer">Limited time offer</p>
+              <p>- ₹18,401</p>
+            </div>
+            <div className="alert-body">
+              <i>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M11 7V13L16.2 16.1L17 14.9L12.5 12.2V7H11ZM20 12V18H22V12H20ZM20 20V22H22V20H20ZM18 20C16.3 21.3 14.3 22 12 22C6.49998 22 1.99998 17.5 1.99998 12C1.99998 6.5 6.49998 2 12 2C16.8 2 20.9 5.4 21.8 10H19.7C18.8 6.6 15.7 4 12 4C7.59998 4 3.99998 7.6 3.99998 12C3.99998 16.4 7.59998 20 12 20C14.4 20 16.5 18.9 18 17.3V20Z"
+                    fill="#DE4313"
+                  />
+                </svg>
+              </i>
+              <p className="deadline">Offer valid till 25th March 2023 </p>
+            </div>
+          </div>
+          <div className="text-container-gst">
+            <p className="gst">Total (Incl. of 18% GST)</p>
+            <p className="finalPrice">{totalValue}</p>
+          </div>
+        </div>
+
+        <ButtonContain />
+
+        <div className="icon-container">
+          <div className="icon"></div>
+        </div>
+      </div>
+    </>
+  );
 }
 
-export default Form
+export default Form;

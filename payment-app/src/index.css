@@ -134,6 +134,20 @@ nav .right-container button {
 }
 
 
+.content-box .box .tv {
+    width: 80px;
+    height: 80px;
+    background: url('../public/Icon\ \(1\).png');
+   
+}
+
+
+.content-box .box .circle{
+    width: 80px;
+    height: 80px;
+    background: url('../public/Icon.png');
+}
+
 .content-box .box p {
     color: #FFF;
     font-family: 'Roboto', sans-serif;
@@ -253,8 +267,25 @@ del {
     background: #E7E7E7;
     color: #BEBEBE;
     height: 80px;
+    position: relative;
 
 }
+
+.form .Expired-text-field1 .expired-offer {
+    padding: 4px 29px;
+    border-radius: 0px 0px 4px 4px;
+    background: #F77171;
+    position: absolute;
+    color: white;
+    position: absolute;
+    left: 62px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    top: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
 
 .form .Input-container .text-field1 {
     display: flex;
@@ -266,20 +297,68 @@ del {
     border-radius: 4px;
     border: 2px solid #BEBEBE;
     height: 80px;
+    position: relative;
 
 }
 
-.form .Input-container .Expired-text-field1 svg {
-    width: 32px;
-    height: 32px;
+.form .Input-container .text-field2 {
+    display: flex;
+    padding: 16px;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+    border-radius: 4px;
+    border-radius: 4px;
+    border: 2px solid #BEBEBE;
+    height: 80px;
+    position: relative;
+
+}
+
+.form .text-field1 .recommened-offer {
+    position: absolute;
+    border-radius: 0px 0px 4px 4px;
+    background: #47BA68;
+    padding: 4px 25px;
+    left: 62px;
+    top: 0;
+    color: white;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+
+.form .Input-container .Expired-text-field1 .btn {
+    width: 30px;
+    height: 30px;
     color: #BEBEBE;
 }
 
-.form .Input-container .text-field1 svg {
-    width: 32px;
-    height: 32px;
-    color: #BEBEBE;
+.form .text-field1 input {
+    accent-color: #47BA68;
 }
+
+.form .btn2 {
+    accent-color: #47BA68;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn2:checked {
+    appearance: auto;
+    clip-path: circle(50% at 50% 50%);
+    accent-color: #47BA68;
+}
+
 
 .form .Input-container .Expired-text-container {
     display: flex;
